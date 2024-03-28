@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body class="grey lighten-3 ">
+    <!-- NAV BAR Start -->
+    <nav class="grey lighten-4 z-depth-0">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <img style="width: 150px;" src="img/logo (1).svg" alt="Image">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down  ">
+                <li class="logged-out"><a class="grey-text modal-trigger" data-target="modal-login" href="#">Login</a></li>
+                <li class="logged-out"><a class="grey-text modal-trigger" data-target="modal-signup" href="#">Sign-Up</a></li>
+                <li class="logged-in"><a class="grey-text modal-trigger" data-target="modal-account" href="#">Account</a></li>
+                <li class="logged-in"><a class="grey-text modal-trigger" data-target="modal-logout" id="logout" href="#">Logout</a></li>
+                <li class="logged-in"><a class="grey-text modal-trigger" data-target="modal-create" href="#">Create Task</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAV BAR End -->
+
+    <!-- Login Modal Start -->
+
+    <div class="modal" id="modal-login" style="border-radius: 10px">
+        <div class="modal-content">
+            <h4>Login</h4>
+            <br>
+            <form class="" action="" id="login-form">
+                <div class="input-field">
+                    <label for="login-email">Enter Email</label>
+                    <input id="login-email" type="email">
+                </div>
+                <br>
+                <div class="input-field">
+                    <label for="login-password">Enter Password</label>
+                    <input id="login-password" type="password">
+                </div>
+                <br>
+                <button class="btn yellow darken-2">Log-in</button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- Login MOdal End -->
+
+    <!-- Sign-Up Modal Start     -->
+    <div class="modal" id="modal-signup" style="border-radius: 10px">
+        <div class="modal-content">
+            <h4>Sign-Up</h4>
+            <br>
+            <form id="signup-form" action="">
+                <div class="input-field">
+                    <input type="email" name="" id="signup-email">
+                    <label for="signup-email">Enter Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="" id="signup-password">
+                    <label for="signup-password">Create Password</label>
+                </div>
+
+                <button class="btn yellow darken-2">Sign-Up</button>
+            </form>
+        </div>
+    </div>
+    <!-- Sign-up modal End -->
+
+    <!-- Account Modal Start -->
+    <div class="modal" id="modal-account" style="border-radius: 10px;">
+        <div class="modal-content center-align">
+
+            <h3>Account</h3>
+            <br>
+            <div class="account-details"></div>
+        </div>
+    </div>
+
+    <!-- Account MOdal End -->
+
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++ LOG OUT+++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- Logout Modal Start -->
+    <div class="modal" id="modal-logout" style="border-radius: 10px">
+        <div class="modal-content center-align">
+            <h4>Logout</h4>
+            <br>
+            <p>It's Sad to see you leave 😔</p>
+        </div>
+    </div>
+    <!-- Logout MOdal ENd -->
+
+
+    <!-- Create Task Modal Start -->
+
+    <div class="modal" id="modal-create" style="border-radius: 10px">
+        <div class="modal-content">
+            <h3>Create Tasks</h3>
+            <br>
+            <form action="" id="create-form">
+
+                <div class="input-field">
+                    <input type="text" id="title">
+                    <label for="title">Task Title</label>
+                </div>
+                <div class="input-field">
+                    <textarea name="" id="content" class="materialize-textarea"></textarea>
+                    <label for="content">Enter the task</label>
+                </div>
+                <button class="btn yellow darken-2">CREATE</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Task MOdal end -->
+    <!-- +++++++++++++++++++++++++++++++++++++++++ non Sign UP div Start +++++++++++++++++++++++++++++++++ -->
+
+    <div class="container" id="picDiv">
+        
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++++++++++ non Sign UP div end +++++++++++++++++++++++++++++++++ -->
+
+    <!-- Tasks Start -->
+
+    <div class="container" style="margin-top: 40px;">
+
+        <ul class="collapsible guides" style="border: none;">
+
+        </ul>
+    </div>
+    <!-- Tasks End -->
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+
+
+</html>
